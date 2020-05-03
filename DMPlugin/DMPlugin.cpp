@@ -68,8 +68,8 @@ void DADeathmatchPlugin::Level_Loaded_Event()
 	Get_Soldier_Spawners();
 	Get_Soldier_Spawnpoints();
 
-	Console_Output("[Unstoppable's Deathmatch] Loaded %d spawners.", SoldierSpawners->Count());
-	Console_Output("[Unstoppable's Deathmatch] Loaded %d spawn points.", SoldierSpawnPoints->Count());
+	Console_Output("[Unstoppable's Deathmatch] Loaded %d spawners.\n", SoldierSpawners->Count());
+	Console_Output("[Unstoppable's Deathmatch] Loaded %d spawn points.\n", SoldierSpawnPoints->Count());
 
 	if (!SoldierSpawnPoints->Count())
 	{
