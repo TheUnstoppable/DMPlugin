@@ -159,17 +159,3 @@ Vector3 DADeathmatchPlugin::Select_Random_Spawner()
 
 Register_Game_Feature(DADeathmatchPlugin, "Unstoppable's Deathmatch", "EnableExtendedDeathmatch", 0);
 
-DADeathmatchPlugin* DMPluginInstance = 0;
-
-extern "C" {
-
-	_declspec(dllexport) void Plugin_Init() {
-		DMPluginInstance = new DADeathmatchPlugin;
-	}
-
-	_declspec(dllexport) void Plugin_Shutdown() {
-		delete DMPluginInstance;
-	}
-
-}
-
