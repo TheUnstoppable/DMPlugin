@@ -12,6 +12,7 @@
 
 class DADeathmatchPlugin : public DAEventClass, public DAGameFeatureClass {
 public:
+	DADeathmatchPlugin();
 	~DADeathmatchPlugin();
 
 	virtual void Init();

@@ -117,6 +117,12 @@ void DADeathmatchPlugin::Object_Created_Event(GameObject* obj)
 	}
 }
 
+DADeathmatchPlugin::DADeathmatchPlugin()
+{
+	SoldierSpawners = 0;
+	SoldierSpawnPoints = 0;
+}
+
 DADeathmatchPlugin::~DADeathmatchPlugin()
 {
 	delete SoldierSpawners;
