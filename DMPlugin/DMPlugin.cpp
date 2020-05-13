@@ -117,6 +117,12 @@ void DADeathmatchPlugin::Object_Created_Event(GameObject* obj)
 	}
 }
 
+DADeathmatchPlugin::~DADeathmatchPlugin()
+{
+	delete SoldierSpawners;
+	delete SoldierSpawnPoints;
+}
+
 DynamicVectorClass<SpawnerClass*> *DADeathmatchPlugin::Get_Soldier_Spawners()
 {
 	SoldierSpawners->Delete_All();

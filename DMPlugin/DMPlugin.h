@@ -12,6 +12,8 @@
 
 class DADeathmatchPlugin : public DAEventClass, public DAGameFeatureClass {
 public:
+	~DADeathmatchPlugin();
+
 	virtual void Init();
 	virtual void Settings_Loaded_Event();
 	virtual void Game_Over_Event();
