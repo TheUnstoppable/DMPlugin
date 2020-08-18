@@ -20,6 +20,7 @@
 
 #define IteratePlayers(Out) SLNode<cPlayer> *Out = Get_Player_List()->Head(); Out; Out = Out->Next()
 REF_DEF2(DynamicVectorClass<SpawnerClass*>, SpawnerList, 0, 0x008564A8);
+#define DM_VERSION 1.30f
 
 void DADeathmatchPlugin::Init()
 {
@@ -53,6 +54,8 @@ void DADeathmatchPlugin::Game_Over_Event()
 
 void DADeathmatchPlugin::Level_Loaded_Event()
 {
+	Console_Output("[Unstoppable's Deathmatch] Initializing Unstoppable's Deathmatch %.2f...\n", DM_VERSION);
+
 	for (IteratePlayers(x))
 	{
 		cPlayer* Player = x->Data();
@@ -68,7 +71,6 @@ void DADeathmatchPlugin::Level_Loaded_Event()
 	Get_Soldier_Spawners();
 	Get_Soldier_Spawnpoints();
 
-	Console_Output("[Unstoppable's Deathmatch] Initializing Unstoppable's Deathmatch 1.2...\n", SoldierSpawners->Count());
 	Console_Output("[Unstoppable's Deathmatch] Loaded %d spawners.\n", SoldierSpawners->Count());
 	Console_Output("[Unstoppable's Deathmatch] Loaded %d spawn points.\n", SoldierSpawnPoints->Count());
 
