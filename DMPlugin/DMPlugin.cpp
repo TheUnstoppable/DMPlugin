@@ -110,7 +110,7 @@ void DADeathmatchPlugin::Object_Created_Event(GameObject* obj)
 		auto Location = Select_Random_Spawner();
 		Commands->Set_Model(obj, PlayerModel);
 		Commands->Set_Position(obj, Location);
-		Fix_Stuck_Object(obj->As_SoldierGameObj(), 3.0f);
+		Fix_Stuck_Object(obj->As_SoldierGameObj(), 0.3f);
 	}
 	else
 	{
