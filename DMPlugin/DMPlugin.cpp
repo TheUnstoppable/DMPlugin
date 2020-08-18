@@ -94,15 +94,16 @@ void DADeathmatchPlugin::Player_Join_Event(cPlayer* Player)
 
 void DADeathmatchPlugin::Object_Created_Event(GameObject* obj)
 {
-	if (Commands->Get_Player_Type(obj) != ForceTeamID)
+	if (obj)
 	{
-		if(!The_Game()->Is_Game_Over())
-			Commands->Set_Player_Type(obj, ForceTeamID);
-		else
-			Commands->Set_Player_Type(obj, GameOverForceTeamID);
-	}
-	else if(obj)
-	{
+		if (Commands->Get_Player_Type(obj) != ForceTeamID)
+		{
+			if (!The_Game()->Is_Game_Over())
+				Commands->Set_Player_Type(obj, ForceTeamID);
+			else
+				Commands->Set_Player_Type(obj, GameOverForceTeamID);
+		}
+
 		Set_Death_Points(obj, -Get_Death_Points(obj));
 		Set_Damage_Points(obj, -Get_Damage_Points(obj));
 
