@@ -21,7 +21,7 @@
 
 #define IteratePlayers(Out) SLNode<cPlayer> *Out = Get_Player_List()->Head(); Out; Out = Out->Next()
 REF_DEF2(DynamicVectorClass<SpawnerClass*>, SpawnerList, 0, 0x008564A8);
-#define DM_VERSION 1.30f
+#define DM_VERSION 1.31f
 
 void DADeathmatchPlugin::Init()
 {
